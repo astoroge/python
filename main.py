@@ -1,8 +1,3 @@
-number = 0
-n = int(input('Введите Н'))
-
-while number <= n:
-    print(number)
-    number = number + 1
-
-    
+number = int(input('Введите число: '))
+new_number = number + 2
+print(new_number)
