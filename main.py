@@ -1,5 +1,7 @@
-number = int(input('Введите число: '))
-while 10 < number > 0:
-    number = int(input('Число не верное. Введите число в диапозоне от 0 до 10: '))
-
-print(number**2)
+while True:
+    user_number = int(input('Введите число: '))
+    if 0 < user_number < 10:
+        print(f'Результат: {user_number ** 2}')
+        break
+    else:
+        print(f'Число не верное. Диапазон допустимых значений от 0 до 10.')
