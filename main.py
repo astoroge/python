@@ -1,5 +1,11 @@
-number = int(input('Введите число: '))
-while 10 < number > 0:
-    number = int(input('Число не верное. Введите число в диапозоне от 0 до 10: '))
+name = input('Введите имя: ')
+lastname = input('Введите фамилию: ')
+age = int(input('Введите возраст: '))
+kg = int(input('Введите вес: '))
 
-print(number**2)
+if age < 30 and 50 < kg < 120:
+    print(f'{name} {lastname}, {age} лет, вес {kg} - хорошее состояние')
+if age > 30 and 50 > kg or kg > 120:
+    print(f'{name} {lastname}, {age} лет, вес {kg} - следует заняться собой')
+if age > 40 and 50 > kg or kg > 120:
+    print(f'{name} {lastname}, {age} лет, вес {kg} - следует обратится к врачу!')
