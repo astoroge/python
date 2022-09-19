@@ -1,24 +1,13 @@
-friend_name = 'Max'
-friends = ['Max', 'Leo', 'Kate']
-roles = ('admin', 'guest', 'user')
+import numbers
 
-if 'Max' in friends:
-    print('У меня есть этот друг')
 
-if 'M' in friend_name:
-    print('Буква М есть в имени друга')
+numbers = range(10)
+print(numbers)
+print(type(numbers))
 
-i = 0
-while i < len(friends):
-    friend = friends[i]
-    print(friend)
-    i += 1
+print(list(numbers))
 
-for friend in friends:
-    print(friend)
+print(list(range(1, 1000, 2)))
 
-for letter in friend_name:
-    print(letter)
-
-for role in roles:
-    print(role)
+for number in range(1, 100, 2):
+    print(number)
