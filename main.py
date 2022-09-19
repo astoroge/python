@@ -1,19 +1,33 @@
-name = input('Введите имя: ')
-lastname = input('Введите фамилию: ')
-age = int(input('Введите возраст: '))
-kg = int(input('Введите вес: '))
+# СТРОКИ
 
-# Пациент в хорошем состоянии, если ему до 30 лет и вес от 50 и до 120 кг,
-# Пациенту требуется заняться собой, если ему более 30 и вес меньше 50 или больше 120 кг
-# Пациенту требуется врачебный осмотр, если ему более 40 и вес менее 50 или больше 120 кг.
+friend = 'Тимур'
+print(type(friend))
+print(len(friend))
+print(friend[0])
+print(friend[-2])
+print(friend[1:4])
+print(friend[:4])
+print(friend[1:])
+print(friend.split('у'))
+print(friend.upper())
+print(friend.lower())
+print(friend.find('и'))
 
-if age < 30 and kg > 50 and kg < 120:
-    print(f'{name} {lastname}, {age} лет, вес {kg} - хорошее состояние')
+name = 'Leo'
+age = 30
 
+hello_str = 'Привет, ' + name + ' тебе ' + str(age) + ' лет'
+print(hello_str)
 
-elif (age > 30 and age < 40) and (kg < 50 or kg > 120):
-    print(f'{name} {lastname}, {age} лет, вес {kg} - следует заняться собой')
+hello_str = 'Привет %s тебе %d лет'%(name, age)
+print(hello_str)
 
+hello_str = 'Привет {} тебе {} лет'.format(name, age)
+print(hello_str)
 
-elif age > 40 and (kg < 50 or kg > 120):
-    print(f'{name} {lastname}, {age} лет, вес {kg} - следует обратится к врачу!')
+top5 = 'Первые 5 мест на соревнованиях: 1. иванов 2. петров 3. сидоров 4. орлов 5. соколов'
+start = top5.find('1')
+end = top5.find('4')
+top3 = top5[start: end]
+result = 'Поздравляем {} c успехом!'.format(top3.upper())
+print(result)
