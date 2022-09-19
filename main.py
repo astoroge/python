@@ -1,37 +1,37 @@
-# friend = {
-#     'name': 'Max',
-#     'age': 23
-# }
+# Во множестве не могут быть двух одинаковых элементов
 
-# print(friend)
-# print(type(friend))
-# print(friend['name'])
+# cities = ['Las Vegas', 'Paris', 'Moscow', 'Paris', 'Moscow']
 
-# friend['has_car'] = True
-# print(friend)
+# print(type(cities))
+# print(cities)
 
-# friend['has_car'] = False
-# print(friend)
+# cities = set(cities)
 
-# del friend['age']
-# print(friend)
+# print(type(cities))
+# print(cities)
 
-# if 'has_car' in friend:
-#     print('Есть тачка')
+# cities = {'Las Vegas', 'Paris', 'Moscow'}
+# print(cities)
+# cities.add('Burma')
+# print(cities)
 
-friend = {
-    'name': 'Max',
-    'age': 23,
-    'has_car': True,
-}
+# cities.remove('Moscow')
+# print(cities)
 
-for key in friend.keys():
-    print(key)
-    print(friend[key])
+# print(len(cities))
 
-for val in friend.values():
-    print(val)
+# print('Paris' in cities)
 
-for key, val in friend.items():
-    print(key)
-    print(val)
+# for city in cities:
+#     print(city)
+
+max_things = {'Телефон', 'Бритва', 'Рубашка', 'Шорты',}
+
+kate_things = {'Телефон', 'Шорты', 'Зонтик', 'Помада'}
+
+print(max_things | kate_things) # объединение списков с неповторяющийся последовательностью
+
+print(max_things & kate_things) # выводит пересечение списков
+
+print(max_things - kate_things) # вычитает из первого списка второй и выводит уникальные вещи первого списка в сравнение со сторым списком
+
