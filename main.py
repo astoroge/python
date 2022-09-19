@@ -1,13 +1,37 @@
-import numbers
+# friend = {
+#     'name': 'Max',
+#     'age': 23
+# }
 
+# print(friend)
+# print(type(friend))
+# print(friend['name'])
 
-numbers = range(10)
-print(numbers)
-print(type(numbers))
+# friend['has_car'] = True
+# print(friend)
 
-print(list(numbers))
+# friend['has_car'] = False
+# print(friend)
 
-print(list(range(1, 1000, 2)))
+# del friend['age']
+# print(friend)
 
-for number in range(1, 100, 2):
-    print(number)
+# if 'has_car' in friend:
+#     print('Есть тачка')
+
+friend = {
+    'name': 'Max',
+    'age': 23,
+    'has_car': True,
+}
+
+for key in friend.keys():
+    print(key)
+    print(friend[key])
+
+for val in friend.values():
+    print(val)
+
+for key, val in friend.items():
+    print(key)
+    print(val)
