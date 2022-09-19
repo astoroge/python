@@ -1,33 +1,49 @@
-# СТРОКИ
+# empty_list = []
+# friends = ['Max','Leo','Kate']
+# print(type(friends))
+# print('Второй друг: ', friends[1])
+# print('Первый друг с концом: ', friends[-1])
+# print(friends[1:2])
+# print(friends[:2])
+# print(friends[1:])
+# print(len(friends))
+# friends.append('Ron')
+# print(friends)
+# print(friends.pop())
+# friends.remove('Max')
+# del friends[0]
+# print(friends)
+# friends.clear()
+# print(friends)
 
-friend = 'Тимур'
-print(type(friend))
-print(len(friend))
-print(friend[0])
-print(friend[-2])
-print(friend[1:4])
-print(friend[:4])
-print(friend[1:])
-print(friend.split('у'))
-print(friend.upper())
-print(friend.lower())
-print(friend.find('и'))
+# hero = 'Superman'
+# if hero.find('man') != -1: # не равно минус один, значит если есть; равно минус один тоже самое что нету
+#     print('Есть')
+# if 'man' in hero:
+#     print('Есть')
 
-name = 'Leo'
-age = 30
+# goals = ['стать гуру языка python', 'здоровье', 'накормить кота']
+# if 'здоровье' in goals:
+#     print('Все хорошо')
 
-hello_str = 'Привет, ' + name + ' тебе ' + str(age) + ' лет'
-print(hello_str)
+# Кортеж - не изменяемый список
 
-hello_str = 'Привет %s тебе %d лет'%(name, age)
-print(hello_str)
+from itertools import count
+from unittest import result
 
-hello_str = 'Привет {} тебе {} лет'.format(name, age)
-print(hello_str)
+print('СОРЕВНОВАНИЯ ПО PYTHON')
+count = int(input('Введите количество участников: '))
+i = count
+members = []
+while i > 0:
+    name = input('Кто занял {} место: '.format(i))
+    members.append(name)
+    i -= 1 # i = i - 1
+print('В соревновании участвовали: ', members)
 
-top5 = 'Первые 5 мест на соревнованиях: 1. иванов 2. петров 3. сидоров 4. орлов 5. соколов'
-start = top5.find('1')
-end = top5.find('4')
-top3 = top5[start: end]
-result = 'Поздравляем {} c успехом!'.format(top3.upper())
+members.reverse()
+
+result = members[:3]
+
+result = 'Победители: {}. Поздравляем!'.format(result)
 print(result)
