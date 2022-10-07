@@ -1,28 +1,34 @@
-# Решить с помощью генераторов списка.
-# 1: Даны два списка фруктов. 
-# Получить список фруктов, присутствующих в обоих исходных списках.
-#
-# list_1 = ['яблоко','огурец','лук','морковь','черника']
-# list_2 = ['помидор','огурец','лук','зелень','капуста']
-# list_3 = []
-# for i in list_1:
-#     if i in list_2:
-#         list_3.append(i)
-# list_3 = [i for i in list_1 if i in list_2]
-# print(list_3)
+import sys
+from core import create_file, create_folder, delete_file, get_list, delete_file, copy_file, save_info 
 
-# 2: Дан список, заполненный произвольными числами. 
-# Получить список из элементов исходного, удовлетворяющих 
-# следующим условиям:
-# Элемент кратен 3,
-# Элемент положительный,
-# Элемент не кратен 4.
-#
-# my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 18, 21, 24 ]
-# result = []
-# for i in my_list:
-#     if i % 3 == 0 and i > 0:
-#         if i % 4 != 0:
-#             result.append(i)
-# result = [ i for i in my_list if i % 3 == 0 and i > 0 and i % 4 != 0]
-# print(result)
+save_info('Старт')
+
+command = sys.argv[1]
+
+if command == 'list':
+    get_list()
+elif command == 'create_file':
+    try:
+        name = sys.argv[2]
+    except IndexError:
+        print('Отсутсвует название файла')
+    else:
+        create_file(name)
+elif command == 'create_folder':
+    name = sys.argv[2]
+    create_folder(name)
+elif command == 'delete':
+    name = sys.argv[2]
+    delete_file(name)
+elif command == 'copy':
+    name = sys.argv[2]
+    new_name = sys.argv[3]
+    copy_file(name, new_name)
+elif command == 'help':
+    print('list - список файлов и папок')
+    print('create_file - создание файла')
+    print('create_folder - создание папки')
+    print('delete - удаление файла или папки')
+    print('copy - копирование файла или папки')
+
+save_info('Конец')
